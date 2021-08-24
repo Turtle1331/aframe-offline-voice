@@ -31,13 +31,22 @@ AFRAME.registerComponent('textrefresh', {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  let synth;
+  document.addEventListener('click', () => {
+    if (!synth) {
+      synth = new Tone.Synth().toDestination();
+    }
+  });
+
   let value = 'hi 0';
   let i = 0;
   const loop_id = setInterval(() => {
     value += `\nhi ${++i}`
     document.querySelector('a-scene').emit('log', {message: value}, false);
-    if (i == 23)
+    if (i == 23) {
       //clearInterval(loop_id);
       [value, i] = ['hi 0', 0];
+      if (synth) synth.triggerAttackRelease("C4", "8n");
+    }
   }, 100);
 });

@@ -6,6 +6,7 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     -->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/tone@14.7.77/build/Tone.js"></script>
     <script src="index.js"></script>
   </head>
   <body>
@@ -21,6 +22,7 @@
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
       <a-entity mixin="console-outer" position="4 1.5 0" rotation="0 -90 0" scale="2 2 2">
+	<a-entity mixin="console-inner"></a-entity>
       </a-entity>
 
       <!-- Workaround for https://github.com/aframevr/aframe/issues/4752 -->
