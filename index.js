@@ -30,7 +30,7 @@ AFRAME.registerComponent('console', {
 AFRAME.registerComponent('textrefresh', {
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+(() => {
   let synth;
   document.addEventListener('click', () => {
     if (!synth) {
@@ -49,4 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
       if (synth) synth.triggerAttackRelease("C4", "8n");
     }
   }, 100);
-});
+})();
