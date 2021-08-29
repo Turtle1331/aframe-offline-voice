@@ -2,8 +2,12 @@ import {postLoadScripts, postLoadBody} from '../loader.js';
 
 export default async function loadPage() {
   await postLoadScripts(`
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/tone@14.7.77/build/Tone.js"></script>
+    <!-- CDN links in case you're serving over a limited connection
+      <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+      <script src="https://unpkg.com/tone@14.7.77/build/Tone.js"></script>
+    -->
+    <script src="libs/aframe-1.2.0.min.js"></script>
+    <script src="libs/Tone-14.7.77.js"></script>
     <!-- TODO figure out why this won't work as a module -->
     <script src="aframe/index.js"></script>
   `);
