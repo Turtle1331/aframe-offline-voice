@@ -20,7 +20,7 @@ This experiment combines a few different technologies:
 ### Try it now
 
 You can try it online at
-[https://turtle1331.github.com/aframe-offline-voice](https://turtle1331.github.com/aframe-offline-voice).
+[https://turtle1331.github.io/aframe-offline-voice](https://turtle1331.github.io/aframe-offline-voice).
 Note that it only supports fairly recent browsers.
 
 
