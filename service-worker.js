@@ -1,7 +1,7 @@
 const CACHE = 'model-cache';
 
-modelI2U = modelId => `/models/${modelId}`;
-modelU2I = modelUrl => modelUrl.split(`/models/`)[1];
+modelI2U = modelId => `models/${modelId}`;
+modelU2I = modelUrl => modelUrl.split(`models/`)[1];
 
 const modelCache = {
   list: function() {

@@ -1,8 +1,8 @@
-import loadAframePage from '../aframe/page.js';
+import loadAframePage from './aframe/page.js';
 
 let buttons;
 
-navigator.serviceWorker.register('/service-worker.js', {scope: '/'});
+navigator.serviceWorker.register('service-worker.js', {scope: '/aframe-offline-voice/'});
 
 const cacheReady = navigator.serviceWorker.controller || new Promise(async resolve => {
   // Wait for the service worker to start activating
@@ -12,7 +12,7 @@ const cacheReady = navigator.serviceWorker.controller || new Promise(async resol
 
 function buildCacheUrl(...args) {
   const searchParams = new URLSearchParams(args.map(x => ['arg', x])).toString();
-  return `/vosk/model-cache?${searchParams}`;
+  return `vosk/model-cache?${searchParams}`;
 
 }
 

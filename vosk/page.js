@@ -5,8 +5,8 @@ export default async function loadPage() {
     <!-- CDN links in case you're serving over a limited connection
       <script type="application/javascript" src="https://rawcdn.githack.com/ccoreilly/vosk-browser/2efebf42a159fd4129477443d8f97909f6a2bc70/examples/modern-vanilla/vosk.js"></script>
     -->
-    <script src="libs/vosk.js"></script>
-    <script type="module" src="vosk/index.js"></script>
+    <script src="./libs/vosk.js"></script>
+    <script type="module" src="./vosk/index.js"></script>
   `);
 
   postLoadBody(`
